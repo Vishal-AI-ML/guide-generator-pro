@@ -1,0 +1,428 @@
+2026-02-07 22:53:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:53:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:53:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:53:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:53:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:59:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:59:03 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-07 22:59:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:59:03 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-07 22:59:03 - guide_generator_flow - INFO - Database record created: 81044401
+2026-02-07 22:59:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:59:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:59:03 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-07 22:59:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 22:59:03 - guide_generator_flow - ERROR - ERROR in Research Crew: 1 validation error for Task
+expected_output
+  Field required [type=missing, input_value={'description': 'Coordina...Only Delegate to speci'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\flow.py", line 121, in run_research_crew
+    research_crew = ResearchCrew().crew()
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\utils.py", line 70, in wrapper
+    result = meth(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 220, in wrapper
+    task_instance = _call_method(task_method, self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 163, in _call_method
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\wrappers.py", line 319, in __call__
+    result = self._meth(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\utils.py", line 70, in wrapper
+    result = meth(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\crews\research_crew\research_crew.py", line 74, in research_compilation
+    return Task(
+           ^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Task
+expected_output
+  Field required [type=missing, input_value={'description': 'Coordina...Only Delegate to speci'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2026-02-07 22:59:03 - guide_generator_flow - ERROR - Skipping writing crew - research failed
+2026-02-07 23:03:38 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:03:38 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-07 23:03:38 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:03:38 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-07 23:03:38 - guide_generator_flow - INFO - Database record created: 63bad26d
+2026-02-07 23:03:38 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:03:38 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:03:38 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-07 23:03:38 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:03:46 - guide_generator_flow - INFO - Delegating research tasks to specialists...
+2026-02-07 23:05:08 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:05:08 - guide_generator_flow - INFO - RESEARCH CREW COMPLETED
+2026-02-07 23:05:08 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:05:08 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:05:08 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:05:10 - guide_generator_flow - ERROR - ERROR in Writing Crew: 1 validation error for Crew
+  Sequential process error: Agent is missing in the task with the following description: Transform the comprehensive research report into a beginner-friendly getting-started guide.
+RESEARCH REPORT TO TRANSFORM INTO GUIDE:  {research_report}
+YOUR TASK: Create a complete getting-started guide following this EXACT structure:
+# Getting Started with [Framework/Tool Name]
+## Introduction
+  - Explain what this framework/tool is in 2-3 simple sentences.
+  - Why beginners should learn it. (benefits, use cases).
+  - What readers will learn by the end of this guide.
+
+## Prerequisites
+  - What knowledge is assumed (if any- explain technical terms).
+  - System Requirements (OS, Hardware)
+  - Software that needs to be installed first.
+
+## Installation and Setup
+  - Step by Step installation instructions.
+  - How to verify if installation is complete.
+  - Basic Configuration (if needed).
+
+## Core concepts
+  - 3-5 fundamental concepts beginners MUST understand.
+  - Explain each concept with simple analogies.
+  - Define all technical terminology.
+
+## Your First [Project/Example]
+  - A simple, practical example to get hands-on knowledge.
+  - Include complete code with line-by-line explanations.
+  - Show the expected output of the code.
+  - Explain what's happening at each step.
+
+## Common Patterns and Use cases
+  - 2-3 typical use cases beginners will encounter 
+  - When to use each pattern 
+  - Simple examples for each
+
+## Troubleshooting
+  - Top 5 errors beginners commonly face.
+  - How to fix each error (step-by-step).
+  - How to recognize these errors.
+
+## Next steps
+  - What to learn after mastering the basics.
+  - Recommended learning path.
+  - Links to next-level tutorials.
+
+## Additional Resources
+  - Links to official documentation.
+  - Community forums and support.
+  - Video tutorials (if mentioned in research)
+
+CRITICAL WRITING GUIDELINES:
+1. BEGINNER FRIENDLY MINDSET:
+  - Assume reader has ZERO experience with this tool. 
+  - Define every technical term before using it. 
+  - Use analogies to explain abstract concepts.
+
+2. CLEAR STRUCTURE:
+  - Use markdown headers properly.
+  - Include code blocks with syntax highlighting.
+  - Use bullet points and numbered lists.
+  - Add emoji or visual markers for important notes.
+
+3. PRACTICAL AND ACTIONABLE:
+  - Every section should have concrete examples.
+  - Core examples must be copy-paste ready.
+  - Include expected outputs where ever possible.
+
+4. ENCOURAGING TONE: 
+  - Use "you" and "we" (friendly, not academic).
+  - Acknowledge that learning is a process.
+  - Celebrate small wins.
+
+5. LENGTH:
+  - Aim for 3000-5000 words.
+  - Better be thorough than brief.
+  - Don't skip explanations to save space.
+ [type=missing_agent_in_task, input_value={'agents': [Agent(role=Be...tial'>, 'verbose': True}, input_type=dict]
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\flow.py", line 179, in run_writing_crew
+    writing_crew = WritingCrew().crew()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\utils.py", line 70, in wrapper
+    result = meth(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 237, in wrapper
+    crew_instance: Crew = _call_method(meth, self, *args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 163, in _call_method
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\crews\writing_crew\writing_crew.py", line 38, in crew
+    return Crew(
+           ^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Crew
+  Sequential process error: Agent is missing in the task with the following description: Transform the comprehensive research report into a beginner-friendly getting-started guide.
+RESEARCH REPORT TO TRANSFORM INTO GUIDE:  {research_report}
+YOUR TASK: Create a complete getting-started guide following this EXACT structure:
+# Getting Started with [Framework/Tool Name]
+## Introduction
+  - Explain what this framework/tool is in 2-3 simple sentences.
+  - Why beginners should learn it. (benefits, use cases).
+  - What readers will learn by the end of this guide.
+
+## Prerequisites
+  - What knowledge is assumed (if any- explain technical terms).
+  - System Requirements (OS, Hardware)
+  - Software that needs to be installed first.
+
+## Installation and Setup
+  - Step by Step installation instructions.
+  - How to verify if installation is complete.
+  - Basic Configuration (if needed).
+
+## Core concepts
+  - 3-5 fundamental concepts beginners MUST understand.
+  - Explain each concept with simple analogies.
+  - Define all technical terminology.
+
+## Your First [Project/Example]
+  - A simple, practical example to get hands-on knowledge.
+  - Include complete code with line-by-line explanations.
+  - Show the expected output of the code.
+  - Explain what's happening at each step.
+
+## Common Patterns and Use cases
+  - 2-3 typical use cases beginners will encounter 
+  - When to use each pattern 
+  - Simple examples for each
+
+## Troubleshooting
+  - Top 5 errors beginners commonly face.
+  - How to fix each error (step-by-step).
+  - How to recognize these errors.
+
+## Next steps
+  - What to learn after mastering the basics.
+  - Recommended learning path.
+  - Links to next-level tutorials.
+
+## Additional Resources
+  - Links to official documentation.
+  - Community forums and support.
+  - Video tutorials (if mentioned in research)
+
+CRITICAL WRITING GUIDELINES:
+1. BEGINNER FRIENDLY MINDSET:
+  - Assume reader has ZERO experience with this tool. 
+  - Define every technical term before using it. 
+  - Use analogies to explain abstract concepts.
+
+2. CLEAR STRUCTURE:
+  - Use markdown headers properly.
+  - Include code blocks with syntax highlighting.
+  - Use bullet points and numbered lists.
+  - Add emoji or visual markers for important notes.
+
+3. PRACTICAL AND ACTIONABLE:
+  - Every section should have concrete examples.
+  - Core examples must be copy-paste ready.
+  - Include expected outputs where ever possible.
+
+4. ENCOURAGING TONE: 
+  - Use "you" and "we" (friendly, not academic).
+  - Acknowledge that learning is a process.
+  - Celebrate small wins.
+
+5. LENGTH:
+  - Aim for 3000-5000 words.
+  - Better be thorough than brief.
+  - Don't skip explanations to save space.
+ [type=missing_agent_in_task, input_value={'agents': [Agent(role=Be...tial'>, 'verbose': True}, input_type=dict]
+2026-02-07 23:09:37 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:09:37 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-07 23:09:37 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:09:37 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-07 23:09:37 - guide_generator_flow - INFO - Database record created: 83c094b9
+2026-02-07 23:09:37 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:09:37 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:09:37 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-07 23:09:37 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:09:44 - guide_generator_flow - INFO - Delegating research tasks to specialists...
+2026-02-07 23:12:06 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:12:06 - guide_generator_flow - INFO - RESEARCH CREW COMPLETED
+2026-02-07 23:12:06 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:12:06 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:12:06 - guide_generator_flow - INFO - ======================================================================
+2026-02-07 23:12:08 - guide_generator_flow - ERROR - ERROR in Writing Crew: 1 validation error for Crew
+  Sequential process error: Agent is missing in the task with the following description: Transform the comprehensive research report into a beginner-friendly getting-started guide.
+RESEARCH REPORT TO TRANSFORM INTO GUIDE:  {research_report}
+YOUR TASK: Create a complete getting-started guide following this EXACT structure:
+# Getting Started with [Framework/Tool Name]
+## Introduction
+  - Explain what this framework/tool is in 2-3 simple sentences.
+  - Why beginners should learn it. (benefits, use cases).
+  - What readers will learn by the end of this guide.
+
+## Prerequisites
+  - What knowledge is assumed (if any- explain technical terms).
+  - System Requirements (OS, Hardware)
+  - Software that needs to be installed first.
+
+## Installation and Setup
+  - Step by Step installation instructions.
+  - How to verify if installation is complete.
+  - Basic Configuration (if needed).
+
+## Core concepts
+  - 3-5 fundamental concepts beginners MUST understand.
+  - Explain each concept with simple analogies.
+  - Define all technical terminology.
+
+## Your First [Project/Example]
+  - A simple, practical example to get hands-on knowledge.
+  - Include complete code with line-by-line explanations.
+  - Show the expected output of the code.
+  - Explain what's happening at each step.
+
+## Common Patterns and Use cases
+  - 2-3 typical use cases beginners will encounter 
+  - When to use each pattern 
+  - Simple examples for each
+
+## Troubleshooting
+  - Top 5 errors beginners commonly face.
+  - How to fix each error (step-by-step).
+  - How to recognize these errors.
+
+## Next steps
+  - What to learn after mastering the basics.
+  - Recommended learning path.
+  - Links to next-level tutorials.
+
+## Additional Resources
+  - Links to official documentation.
+  - Community forums and support.
+  - Video tutorials (if mentioned in research)
+
+CRITICAL WRITING GUIDELINES:
+1. BEGINNER FRIENDLY MINDSET:
+  - Assume reader has ZERO experience with this tool. 
+  - Define every technical term before using it. 
+  - Use analogies to explain abstract concepts.
+
+2. CLEAR STRUCTURE:
+  - Use markdown headers properly.
+  - Include code blocks with syntax highlighting.
+  - Use bullet points and numbered lists.
+  - Add emoji or visual markers for important notes.
+
+3. PRACTICAL AND ACTIONABLE:
+  - Every section should have concrete examples.
+  - Core examples must be copy-paste ready.
+  - Include expected outputs where ever possible.
+
+4. ENCOURAGING TONE: 
+  - Use "you" and "we" (friendly, not academic).
+  - Acknowledge that learning is a process.
+  - Celebrate small wins.
+
+5. LENGTH:
+  - Aim for 3000-5000 words.
+  - Better be thorough than brief.
+  - Don't skip explanations to save space.
+ [type=missing_agent_in_task, input_value={'agents': [Agent(role=Be...tial'>, 'verbose': True}, input_type=dict]
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\flow.py", line 179, in run_writing_crew
+    writing_crew = WritingCrew().crew()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\utils.py", line 70, in wrapper
+    result = meth(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 237, in wrapper
+    crew_instance: Crew = _call_method(meth, self, *args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 163, in _call_method
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\crews\writing_crew\writing_crew.py", line 38, in crew
+    return Crew(
+           ^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Crew
+  Sequential process error: Agent is missing in the task with the following description: Transform the comprehensive research report into a beginner-friendly getting-started guide.
+RESEARCH REPORT TO TRANSFORM INTO GUIDE:  {research_report}
+YOUR TASK: Create a complete getting-started guide following this EXACT structure:
+# Getting Started with [Framework/Tool Name]
+## Introduction
+  - Explain what this framework/tool is in 2-3 simple sentences.
+  - Why beginners should learn it. (benefits, use cases).
+  - What readers will learn by the end of this guide.
+
+## Prerequisites
+  - What knowledge is assumed (if any- explain technical terms).
+  - System Requirements (OS, Hardware)
+  - Software that needs to be installed first.
+
+## Installation and Setup
+  - Step by Step installation instructions.
+  - How to verify if installation is complete.
+  - Basic Configuration (if needed).
+
+## Core concepts
+  - 3-5 fundamental concepts beginners MUST understand.
+  - Explain each concept with simple analogies.
+  - Define all technical terminology.
+
+## Your First [Project/Example]
+  - A simple, practical example to get hands-on knowledge.
+  - Include complete code with line-by-line explanations.
+  - Show the expected output of the code.
+  - Explain what's happening at each step.
+
+## Common Patterns and Use cases
+  - 2-3 typical use cases beginners will encounter 
+  - When to use each pattern 
+  - Simple examples for each
+
+## Troubleshooting
+  - Top 5 errors beginners commonly face.
+  - How to fix each error (step-by-step).
+  - How to recognize these errors.
+
+## Next steps
+  - What to learn after mastering the basics.
+  - Recommended learning path.
+  - Links to next-level tutorials.
+
+## Additional Resources
+  - Links to official documentation.
+  - Community forums and support.
+  - Video tutorials (if mentioned in research)
+
+CRITICAL WRITING GUIDELINES:
+1. BEGINNER FRIENDLY MINDSET:
+  - Assume reader has ZERO experience with this tool. 
+  - Define every technical term before using it. 
+  - Use analogies to explain abstract concepts.
+
+2. CLEAR STRUCTURE:
+  - Use markdown headers properly.
+  - Include code blocks with syntax highlighting.
+  - Use bullet points and numbered lists.
+  - Add emoji or visual markers for important notes.
+
+3. PRACTICAL AND ACTIONABLE:
+  - Every section should have concrete examples.
+  - Core examples must be copy-paste ready.
+  - Include expected outputs where ever possible.
+
+4. ENCOURAGING TONE: 
+  - Use "you" and "we" (friendly, not academic).
+  - Acknowledge that learning is a process.
+  - Celebrate small wins.
+
+5. LENGTH:
+  - Aim for 3000-5000 words.
+  - Better be thorough than brief.
+  - Don't skip explanations to save space.
+ [type=missing_agent_in_task, input_value={'agents': [Agent(role=Be...tial'>, 'verbose': True}, input_type=dict]

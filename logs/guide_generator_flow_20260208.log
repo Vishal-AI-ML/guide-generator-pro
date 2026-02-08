@@ -1,0 +1,354 @@
+2026-02-08 09:56:56 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:56:56 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-08 09:56:56 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:56:56 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-08 09:56:56 - guide_generator_flow - INFO - Database record created: 15d68b7f
+2026-02-08 09:56:56 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:56:56 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:56:56 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-08 09:56:56 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:57:00 - guide_generator_flow - INFO - Delegating research tasks to specialists...
+2026-02-08 09:58:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:58:13 - guide_generator_flow - INFO - RESEARCH CREW COMPLETED
+2026-02-08 09:58:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:58:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:58:13 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 09:58:14 - guide_generator_flow - ERROR - ERROR in Writing Crew: 1 validation error for Crew
+  Sequential process error: Agent is missing in the task with the following description: Transform the comprehensive research report into a beginner-friendly getting-started guide.
+RESEARCH REPORT TO TRANSFORM INTO GUIDE:  {research_report}
+YOUR TASK: Create a complete getting-started guide following this EXACT structure:
+# Getting Started with [Framework/Tool Name]
+## Introduction
+  - Explain what this framework/tool is in 2-3 simple sentences.
+  - Why beginners should learn it. (benefits, use cases).
+  - What readers will learn by the end of this guide.
+
+## Prerequisites
+  - What knowledge is assumed (if any- explain technical terms).
+  - System Requirements (OS, Hardware)
+  - Software that needs to be installed first.
+
+## Installation and Setup
+  - Step by Step installation instructions.
+  - How to verify if installation is complete.
+  - Basic Configuration (if needed).
+
+## Core concepts
+  - 3-5 fundamental concepts beginners MUST understand.
+  - Explain each concept with simple analogies.
+  - Define all technical terminology.
+
+## Your First [Project/Example]
+  - A simple, practical example to get hands-on knowledge.
+  - Include complete code with line-by-line explanations.
+  - Show the expected output of the code.
+  - Explain what's happening at each step.
+
+## Common Patterns and Use cases
+  - 2-3 typical use cases beginners will encounter 
+  - When to use each pattern 
+  - Simple examples for each
+
+## Troubleshooting
+  - Top 5 errors beginners commonly face.
+  - How to fix each error (step-by-step).
+  - How to recognize these errors.
+
+## Next steps
+  - What to learn after mastering the basics.
+  - Recommended learning path.
+  - Links to next-level tutorials.
+
+## Additional Resources
+  - Links to official documentation.
+  - Community forums and support.
+  - Video tutorials (if mentioned in research)
+
+CRITICAL WRITING GUIDELINES:
+1. BEGINNER FRIENDLY MINDSET:
+  - Assume reader has ZERO experience with this tool. 
+  - Define every technical term before using it. 
+  - Use analogies to explain abstract concepts.
+
+2. CLEAR STRUCTURE:
+  - Use markdown headers properly.
+  - Include code blocks with syntax highlighting.
+  - Use bullet points and numbered lists.
+  - Add emoji or visual markers for important notes.
+
+3. PRACTICAL AND ACTIONABLE:
+  - Every section should have concrete examples.
+  - Core examples must be copy-paste ready.
+  - Include expected outputs where ever possible.
+
+4. ENCOURAGING TONE: 
+  - Use "you" and "we" (friendly, not academic).
+  - Acknowledge that learning is a process.
+  - Celebrate small wins.
+
+5. LENGTH:
+  - Aim for 3000-5000 words.
+  - Better be thorough than brief.
+  - Don't skip explanations to save space.
+ [type=missing_agent_in_task, input_value={'agents': [Agent(role=Be...tial'>, 'verbose': True}, input_type=dict]
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\flow.py", line 179, in run_writing_crew
+    writing_crew = WritingCrew().crew()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\utils.py", line 70, in wrapper
+    result = meth(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 237, in wrapper
+    crew_instance: Crew = _call_method(meth, self, *args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\project\annotations.py", line 163, in _call_method
+    result = method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\crews\writing_crew\writing_crew.py", line 38, in crew
+    return Crew(
+           ^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Crew
+  Sequential process error: Agent is missing in the task with the following description: Transform the comprehensive research report into a beginner-friendly getting-started guide.
+RESEARCH REPORT TO TRANSFORM INTO GUIDE:  {research_report}
+YOUR TASK: Create a complete getting-started guide following this EXACT structure:
+# Getting Started with [Framework/Tool Name]
+## Introduction
+  - Explain what this framework/tool is in 2-3 simple sentences.
+  - Why beginners should learn it. (benefits, use cases).
+  - What readers will learn by the end of this guide.
+
+## Prerequisites
+  - What knowledge is assumed (if any- explain technical terms).
+  - System Requirements (OS, Hardware)
+  - Software that needs to be installed first.
+
+## Installation and Setup
+  - Step by Step installation instructions.
+  - How to verify if installation is complete.
+  - Basic Configuration (if needed).
+
+## Core concepts
+  - 3-5 fundamental concepts beginners MUST understand.
+  - Explain each concept with simple analogies.
+  - Define all technical terminology.
+
+## Your First [Project/Example]
+  - A simple, practical example to get hands-on knowledge.
+  - Include complete code with line-by-line explanations.
+  - Show the expected output of the code.
+  - Explain what's happening at each step.
+
+## Common Patterns and Use cases
+  - 2-3 typical use cases beginners will encounter 
+  - When to use each pattern 
+  - Simple examples for each
+
+## Troubleshooting
+  - Top 5 errors beginners commonly face.
+  - How to fix each error (step-by-step).
+  - How to recognize these errors.
+
+## Next steps
+  - What to learn after mastering the basics.
+  - Recommended learning path.
+  - Links to next-level tutorials.
+
+## Additional Resources
+  - Links to official documentation.
+  - Community forums and support.
+  - Video tutorials (if mentioned in research)
+
+CRITICAL WRITING GUIDELINES:
+1. BEGINNER FRIENDLY MINDSET:
+  - Assume reader has ZERO experience with this tool. 
+  - Define every technical term before using it. 
+  - Use analogies to explain abstract concepts.
+
+2. CLEAR STRUCTURE:
+  - Use markdown headers properly.
+  - Include code blocks with syntax highlighting.
+  - Use bullet points and numbered lists.
+  - Add emoji or visual markers for important notes.
+
+3. PRACTICAL AND ACTIONABLE:
+  - Every section should have concrete examples.
+  - Core examples must be copy-paste ready.
+  - Include expected outputs where ever possible.
+
+4. ENCOURAGING TONE: 
+  - Use "you" and "we" (friendly, not academic).
+  - Acknowledge that learning is a process.
+  - Celebrate small wins.
+
+5. LENGTH:
+  - Aim for 3000-5000 words.
+  - Better be thorough than brief.
+  - Don't skip explanations to save space.
+ [type=missing_agent_in_task, input_value={'agents': [Agent(role=Be...tial'>, 'verbose': True}, input_type=dict]
+2026-02-08 10:01:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:01:53 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-08 10:01:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:01:53 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-08 10:01:53 - guide_generator_flow - INFO - Database record created: 4d76c75d
+2026-02-08 10:01:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:01:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:01:53 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-08 10:01:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:01:57 - guide_generator_flow - INFO - Delegating research tasks to specialists...
+2026-02-08 10:09:03 - guide_generator_flow - ERROR - ERROR in Research Crew: cannot schedule new futures after shutdown
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 459, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 568, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 207, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 305, in _invoke_loop
+    return self._invoke_loop_native_tools()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 579, in _invoke_loop_native_tools
+    raise e
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 519, in _invoke_loop_native_tools
+    tool_finish = self._handle_native_tool_calls(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 912, in _handle_native_tool_calls
+    crewai_event_bus.emit(
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\events\event_bus.py", line 413, in emit
+    sync_future = self._sync_executor.submit(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\anaconda3\Lib\concurrent\futures\thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 443, in execute_task
+    crewai_event_bus.emit(
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\events\event_bus.py", line 413, in emit
+    sync_future = self._sync_executor.submit(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\anaconda3\Lib\concurrent\futures\thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 443, in execute_task
+    crewai_event_bus.emit(
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\events\event_bus.py", line 413, in emit
+    sync_future = self._sync_executor.submit(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\anaconda3\Lib\concurrent\futures\thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\task.py", line 671, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 493, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 493, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\agent\core.py", line 484, in execute_task
+    crewai_event_bus.emit(
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\events\event_bus.py", line 413, in emit
+    sync_future = self._sync_executor.submit(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\anaconda3\Lib\concurrent\futures\thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\crew.py", line 745, in kickoff
+    result = self._run_hierarchical_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\crew.py", line 1155, in _run_hierarchical_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\crew.py", line 1236, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\task.py", line 499, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\task.py", line 739, in _execute_core
+    crewai_event_bus.emit(self, TaskFailedEvent(error=str(e), task=self))  # type: ignore[no-untyped-call]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\events\event_bus.py", line 413, in emit
+    sync_future = self._sync_executor.submit(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\anaconda3\Lib\concurrent\futures\thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\visha\guide_generator_pro\src\guide_generator_pro\flow.py", line 124, in run_research_crew
+    result = research_crew.kickoff(inputs={
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\crew.py", line 758, in kickoff
+    crewai_event_bus.emit(
+  File "C:\Users\visha\guide_generator_pro\venv\Lib\site-packages\crewai\events\event_bus.py", line 413, in emit
+    sync_future = self._sync_executor.submit(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\visha\anaconda3\Lib\concurrent\futures\thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+2026-02-08 10:16:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:16:53 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-08 10:16:53 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:16:53 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-08 10:16:54 - guide_generator_flow - INFO - Database record created: 01fd0f60
+2026-02-08 10:16:54 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:16:54 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:16:54 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-08 10:16:54 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:17:02 - guide_generator_flow - INFO - Delegating research tasks to specialists...
+2026-02-08 10:22:42 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:22:42 - guide_generator_flow - INFO - RESEARCH CREW COMPLETED
+2026-02-08 10:22:42 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:22:42 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:22:42 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:22:44 - guide_generator_flow - INFO - Transforming research into beginner-friendly guide...
+2026-02-08 10:23:03 - guide_generator_flow - INFO - Metrics saved: outputs\metrics_01fd0f60.json
+2026-02-08 10:23:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:23:03 - guide_generator_flow - INFO - WRITING CREW COMPLETED
+2026-02-08 10:23:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:23:03 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:36:07 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:36:07 - guide_generator_flow - INFO - GUIDE GENERATOR FLOW STARTED
+2026-02-08 10:36:07 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:36:07 - guide_generator_flow - INFO - Sources provided: YouTube, Web Pages, Research Papers
+2026-02-08 10:36:07 - guide_generator_flow - INFO - Database record created: 7e14f23c
+2026-02-08 10:36:07 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:36:07 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:36:07 - guide_generator_flow - INFO - CREW 1: RESEARCH CREW (Hierarchical)
+2026-02-08 10:36:07 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:36:14 - guide_generator_flow - INFO - Delegating research tasks to specialists...
+2026-02-08 10:37:01 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:37:01 - guide_generator_flow - INFO - RESEARCH CREW COMPLETED
+2026-02-08 10:37:01 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:37:01 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:37:01 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:37:04 - guide_generator_flow - INFO - Transforming research into beginner-friendly guide...
+2026-02-08 10:37:26 - guide_generator_flow - INFO - Metrics saved: outputs\metrics_7e14f23c.json
+2026-02-08 10:37:26 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:37:26 - guide_generator_flow - INFO - WRITING CREW COMPLETED
+2026-02-08 10:37:26 - guide_generator_flow - INFO - ======================================================================
+2026-02-08 10:37:26 - guide_generator_flow - INFO - ======================================================================
